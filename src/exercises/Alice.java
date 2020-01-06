@@ -9,6 +9,12 @@ public class Alice {
         System.out.println("Enter a term to search for:");
         String term = input.nextLine();
         Boolean answer = sentence.toLowerCase().contains(term.toLowerCase());
+        Integer index = sentence.indexOf(term);
+        Integer length = term.length();
+        String newSentence = sentence.substring(0, index) + sentence.substring(index + length, 301);
         System.out.println(answer);
+        System.out.println("index: " + index);
+        System.out.println("length: " + length);
+        System.out.println("Sentence without the searched term: " + newSentence);
     }
 }

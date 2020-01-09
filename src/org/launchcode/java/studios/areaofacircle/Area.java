@@ -7,7 +7,7 @@ public class Area {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter radius:");
         Double radius = input.nextDouble();
-        while (radius <= 0) {
+        while (radius <= 0 || radius instanceof Double == false) {
             System.out.println("Invalid. Enter radius:");
             radius = input.nextDouble();
         }
@@ -15,6 +15,5 @@ public class Area {
             Double area = Circle.getArea(radius);
             System.out.println("The area of a circle with a radius of " + radius + " is " + area + ".");
         }
-
     }
 }

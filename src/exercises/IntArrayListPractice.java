@@ -84,9 +84,11 @@ public class IntArrayListPractice {
                 results = results.concat(word);
                 results = results.concat(", ");
                 continue;
-            } else {
-                results = "No results.  ";
             }
+
+        }
+        if (results == ""){
+            results = "No results.  ";
         }
         String finalResults = results.substring(0, results.length() - 2);
         return finalResults;
